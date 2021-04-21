@@ -7,3 +7,8 @@ clone Trello
 
 - 리스트(카드) 생성, 수정, 삭제
 - 댓글 생성, 수정, 삭제
+
+#### 서버 : nodejs + express
+
+#### 클라이언트 : React
+
