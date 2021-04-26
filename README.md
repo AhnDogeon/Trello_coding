@@ -12,3 +12,17 @@ clone Trello
 
 #### 클라이언트 : React
 
+```bash
+npm install express --save
+```
+
+```bash
+node index.js
+```
+
+express generator 설치
+
+```bash
+npm install express-generator -g
+```
+
