@@ -1,22 +1,18 @@
-const form = document.querySelector(".js-form"),
-    input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greeting");
+const cardForm = document.querySelector(".js-cards-form"),
+    cardInput = cardForm.querySelector("input"),
+    cardList = document.querySelector(".js-cards-list");
 
-const CARD_LS = "currentCard";
+const CARD_LS = "CARDS";
 
-function loadCard() {
-    const currentCard = localStorage.getItem(CARD_LS);
-    if (currentCard === null){
-
-
-    } else{
+function loadCards(){
+    const cards = localStorage.getItem(CARD_LS);
+    if (cards !== null){
 
     }
 }
 
-
-
 function init(){
+    loadCards();
 
 }
 

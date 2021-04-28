@@ -7,8 +7,7 @@ body {
 }
 
 h1 {
-    font-size: 100px;
-    color: red!important;
+    color: #34495e;
     transition: color 0.5s ease-in-out;
 }
 
