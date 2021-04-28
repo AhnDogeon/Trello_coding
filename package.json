@@ -1,7 +1,7 @@
 {
-  "name": "trello_coding",
+  "name": "trello",
   "version": "1.0.0",
-  "description": "trello_coding",
+  "description": "trello",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/AhnDogeon/Trello_coding.git"
   },
-  "author": "dogeon",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AhnDogeon/Trello_coding/issues"
