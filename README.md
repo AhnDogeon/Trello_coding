@@ -10,7 +10,7 @@ clone Trello
 
 #### 서버 : nodejs + express
 
-#### 클라이언트 : React
+#### 프론트 : JS
 
 ```bash
 npm install express --save
