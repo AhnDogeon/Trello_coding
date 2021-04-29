@@ -9,11 +9,13 @@ function paintCard(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const cardForm = document.createElement("form");
-    delBtn.value = "❌";
+    const cardinput = document.createElement("input");
     const span = document.createElement("span");
-    span.innerText(text);
+    delBtn.innerText = "❌";
+    cardForm.appendChild(cardinput);
+    span.innerText = text;
     li.appendChild(span);
-    //li.appendChild(cardForm);
+    li.appendChild(cardForm);
     li.appendChild(delBtn);
     cardList.appendChild(li);
 }
