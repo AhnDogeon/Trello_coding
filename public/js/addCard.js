@@ -2,33 +2,42 @@ const cardForm = document.querySelector(".js-cards-form"),
     cardInput = cardForm.querySelector("input"),
     cardList = document.querySelector(".js-cards-list");
 
-const CARD_LS = "CARDS";
+const LIST_LS = "LISTS";
 
-function paintCard(text){
-    console.log(text);
+const lists = [];
+
+function paintList(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const cardForm = document.createElement("form");
     const cardinput = document.createElement("input");
     const span = document.createElement("span");
     delBtn.innerText = "❌";
+    cardinput.placeholder = "Add a Card";
     cardForm.appendChild(cardinput);
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(cardForm);
     li.appendChild(delBtn);
     cardList.appendChild(li);
+
+    const listsObj = {
+        text: text,
+        id: lists.length + 1
+    };
+    lists.push(listsObj);
+
 }
 
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = cardInput.value;
-    paintCard(currentValue);
+    paintList(currentValue);
 }
 
 function loadCards(){
-    const cards = localStorage.getItem(CARD_LS);
-    if (cards !== null){
+    const loadedlists = localStorage.getItem(LIST_LS);
+    if (loadedlists !== null){
 
     }
 }
