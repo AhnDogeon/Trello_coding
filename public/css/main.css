@@ -16,8 +16,12 @@ h1 {
     color:#7f8c8d;
 }
 
-li {
+.js-lists-li {
     list-style: none;
     float: left;
     margin-left: 20px;
+}
+
+.js-cards-list {
+    life-style: none;
 }

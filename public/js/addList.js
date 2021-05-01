@@ -1,5 +1,5 @@
 const ListForm = document.querySelector(".js-lists-form"),
-    listInput = ListForm.querySelector("input"),
+    listInput = ListForm.querySelector(".js-lists-input"),
     listList = document.querySelector(".js-lists-list");
 
 const LIST_LS = "lists";
@@ -32,17 +32,23 @@ function paintList(text){
     const cardForm = document.createElement("form");
     const cardInput = document.createElement("input");
     const span = document.createElement("span");
+    const cardUl = document.createElement("ul");
     // 삭제를 위한 id 생성
     const listId = lists.length + 1;
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteLists);
     cardInput.placeholder = "Add a Card";
+    cardInput.className = "js-cards-input";
+    cardForm.className = "js-cards-form";
     cardForm.appendChild(cardInput);
+    cardUl.className = "js-cards-list";
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(cardForm);
     li.appendChild(delBtn);
+    li.append(cardUl);
     li.id = listId;
+    li.className = "js-lists-li";
     listList.appendChild(li);
 
     const listsObj = {
