@@ -6,12 +6,18 @@ const LIST_LS = "LISTS";
 
 const lists = [];
 
+function saveLists(){
+    localStorage.setItem(LIST_LS, JSON.stringify(lists));
+}
+
+
 function paintList(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const cardForm = document.createElement("form");
     const cardinput = document.createElement("input");
     const span = document.createElement("span");
+    const listId = lists.length + 1;
     delBtn.innerText = "❌";
     cardinput.placeholder = "Add a Card";
     cardForm.appendChild(cardinput);
@@ -23,10 +29,10 @@ function paintList(text){
 
     const listsObj = {
         text: text,
-        id: lists.length + 1
+        id: listId,
     };
     lists.push(listsObj);
-
+    saveLists();
 }
 
 function handleSubmit(event){
