@@ -2,7 +2,7 @@ const ListForm = document.querySelector(".js-lists-form"),
     listInput = ListForm.querySelector("input"),
     listList = document.querySelector(".js-lists-list");
 
-const LIST_LS = "LISTS";
+const LIST_LS = "lists";
 
 let lists = [];
 
@@ -16,11 +16,13 @@ function deleteLists(event){
     const btn = event.target;
     const li = btn.parentNode;
     listList.removeChild(li);
-    const cleanLists = lists.filter(function(list){
+    console.log(lists);
+    const cleanLists = lists.filter(function(list) {
         return list.id !== parseInt(li.id);
     });
-   lists = cleanLists;
-   saveLists();
+    console.log(cleanLists);
+    lists = cleanLists;
+    saveLists();
 }
 
 // 리스트 생성
@@ -40,6 +42,7 @@ function paintList(text){
     li.appendChild(span);
     li.appendChild(cardForm);
     li.appendChild(delBtn);
+    li.id = listId;
     listList.appendChild(li);
 
     const listsObj = {
@@ -54,6 +57,7 @@ function handleSubmit(event){
     event.preventDefault();
     const currentValue = listInput.value;
     paintList(currentValue);
+    listInput.value = "";
 }
 
 function loadLists(){
