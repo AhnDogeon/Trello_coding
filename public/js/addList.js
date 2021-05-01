@@ -16,11 +16,9 @@ function deleteLists(event){
     const btn = event.target;
     const li = btn.parentNode;
     listList.removeChild(li);
-    console.log(lists);
     const cleanLists = lists.filter(function(list) {
         return list.id !== parseInt(li.id);
     });
-    console.log(cleanLists);
     lists = cleanLists;
     saveLists();
 }
@@ -41,6 +39,7 @@ function paintList(text){
     cardInput.className = "js-cards-input";
     cardForm.className = "js-cards-form";
     cardForm.appendChild(cardInput);
+    cardForm.id = "js-card-id" + String(listId);
     cardUl.className = "js-cards-list";
     span.innerText = text;
     li.appendChild(span);

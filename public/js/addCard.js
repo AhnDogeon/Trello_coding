@@ -1,7 +1,6 @@
-const cardForm = document.querySelector(".js-cards-form"),
-    cardInput = cardForm.querySelector(".js-cards-input"),
+let cardForm = document.querySelector(".js-cards-form");
+let cardInput = cardForm.querySelector(".js-cards-input"),
     cardList = document.querySelector(".js-cards-list");
-
 const CARD_LS = "cards";
 
 let cards = [];
@@ -34,7 +33,7 @@ function loadCards(){
     if (loadedCards !== null){
         const parsedCards = JSON.parse(loadedCards);
         parsedCards.forEach(function(card){
-            paintList(card.text);
+            paintCard(card.text);
         });
 
     }
@@ -42,8 +41,11 @@ function loadCards(){
 
 function handleSubmit(event){
     event.preventDefault();
+    const a = document.querySelectorAll("form");
+    cardForm = event.target;
+    cardInput = cardForm.querySelector(".js-cards-input");
+    cardList = document.querySelector(".js-cards-list");
     const currentValue = cardInput.value;
-    console.log(cardInput);
     paintCard(currentValue);
     cardInput.value = "";
 }
@@ -51,7 +53,7 @@ function handleSubmit(event){
 
 function init(){
     loadCards();
-    cardForm.addEventListener("submit", handleSubmit);
+    addEventListener("submit", handleSubmit);
 }
 
 init();
