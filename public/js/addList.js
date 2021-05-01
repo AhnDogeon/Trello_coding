@@ -4,11 +4,23 @@ const ListForm = document.querySelector(".js-lists-form"),
 
 const LIST_LS = "LISTS";
 
-const lists = [];
+let lists = [];
 
 // Local Storage 저장
 function saveLists(){
     localStorage.setItem(LIST_LS, JSON.stringify(lists));
+}
+
+// li 삭제
+function deleteLists(event){
+    const btn = event.target;
+    const li = btn.parentNode;
+    listList.removeChild(li);
+    const cleanLists = lists.filter(function(list){
+        return list.id !== parseInt(li.id);
+    });
+   lists = cleanLists;
+   saveLists();
 }
 
 // 리스트 생성
@@ -21,6 +33,7 @@ function paintList(text){
     // 삭제를 위한 id 생성
     const listId = lists.length + 1;
     delBtn.innerText = "❌";
+    delBtn.addEventListener("click", deleteLists);
     cardInput.placeholder = "Add a Card";
     cardForm.appendChild(cardInput);
     span.innerText = text;
@@ -46,6 +59,10 @@ function handleSubmit(event){
 function loadLists(){
     const loadedLists = localStorage.getItem(LIST_LS);
     if (loadedLists !== null){
+        const parsedLists = JSON.parse(loadedLists);
+        parsedLists.forEach(function(list){
+            paintList(list.text);
+        });
 
     }
 }
