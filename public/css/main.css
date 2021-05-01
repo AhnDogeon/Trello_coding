@@ -1,6 +1,5 @@
 body {
     background-color: #ecf0f1;
-    text-align: center;
 }
 
 .btn {
@@ -9,9 +8,16 @@ body {
 
 h1 {
     color: #34495e;
+    text-align: center;
     transition: color 0.5s ease-in-out;
 }
 
 .clicked {
     color:#7f8c8d;
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin-left: 20px;
 }

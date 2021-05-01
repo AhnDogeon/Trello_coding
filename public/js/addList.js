@@ -1,6 +1,6 @@
-const cardForm = document.querySelector(".js-cards-form"),
-    cardInput = cardForm.querySelector("input"),
-    cardList = document.querySelector(".js-cards-list");
+const ListForm = document.querySelector(".js-lists-form"),
+    listInput = ListForm.querySelector("input"),
+    listList = document.querySelector(".js-lists-list");
 
 const LIST_LS = "LISTS";
 
@@ -19,7 +19,7 @@ function paintList(text){
     li.appendChild(span);
     li.appendChild(cardForm);
     li.appendChild(delBtn);
-    cardList.appendChild(li);
+    listList.appendChild(li);
 
     const listsObj = {
         text: text,
@@ -31,11 +31,11 @@ function paintList(text){
 
 function handleSubmit(event){
     event.preventDefault();
-    const currentValue = cardInput.value;
+    const currentValue = listInput.value;
     paintList(currentValue);
 }
 
-function loadCards(){
+function loadLists(){
     const loadedlists = localStorage.getItem(LIST_LS);
     if (loadedlists !== null){
 
@@ -43,8 +43,8 @@ function loadCards(){
 }
 
 function init(){
-    loadCards();
-    cardForm.addEventListener("submit", handleSubmit);
+    loadLists();
+    ListForm.addEventListener("submit", handleSubmit);
 }
 
 init();
