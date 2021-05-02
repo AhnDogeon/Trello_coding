@@ -13,17 +13,17 @@ function saveCards(){
 
 function deleteCards(event){
     const btn = event.target;
-    const li = btn.parentNode;
-    cardList.removeChild(li);
+    const div = btn.parentNode;
+    cardList.removeChild(div);
     const cleanCards = cards.filter(function(card) {
-        return card.id !== parseInt(li.id);
+        return card.id !== parseInt(div.id);
     });
     cards = cleanCards;
     saveCards();
 }
 
 function paintCard(text){
-    const liCard = document.createElement("li");
+    const divCard = document.createElement("div");
     const delCardBtn = document.createElement("button");
     const spanCard = document.createElement("span");
     // 삭제를 위한 id 생성
@@ -31,10 +31,10 @@ function paintCard(text){
     delCardBtn.innerText = "❌";
     delCardBtn.addEventListener("click", deleteCards);
     spanCard.innerText = text;
-    liCard.appendChild(spanCard);
-    liCard.appendChild(delCardBtn);
-    liCard.id = cardId;
-    cardList.appendChild(liCard);
+    divCard.appendChild(spanCard);
+    divCard.appendChild(delCardBtn);
+    divCard.id = cardId;
+    cardList.appendChild(divCard);
 
     const cardsObj = {
         text: text,
@@ -47,12 +47,11 @@ function paintCard(text){
 
 function loadCards(){
     const loadedCards = localStorage.getItem(CARD_LS);
-    if (loadedCards !== null){
-        const parsedCards = JSON.parse(loadedCards);
+    const parsedCards = JSON.parse(loadedCards);
+    if (parsedCards !== null){
         parsedCards.forEach(function(card){
             paintCard(card.text);
         });
-
     }
 }
 
@@ -61,17 +60,15 @@ function handleSubmit(event){
     cardForm = event.target;
     cardInput = cardForm.querySelector(".js-cards-input");
     cardList = cardForm.parentNode.querySelector(".js-cards-list");
-    console.log(cardList);
-    //cardList.removeChild("li");
     const currentValue = cardInput.value;
     paintCard(currentValue);
     cardInput.value = "";
 }
 
 
-function init(){
+function cardInit(){
     loadCards();
     addEventListener("submit", handleSubmit);
 }
 
-init();
+cardInit();

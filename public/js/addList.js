@@ -67,12 +67,14 @@ function handleSubmit(event){
 
 function loadLists(){
     const loadedLists = localStorage.getItem(LIST_LS);
-    if (loadedLists !== null){
-        const parsedLists = JSON.parse(loadedLists);
+    const parsedLists = JSON.parse(loadedLists);
+    console.log('loadedLists', loadedLists);
+    if (parsedLists !== null ){
+        console.log('list null');
+        // const parsedLists = JSON.parse(loadedLists);
         parsedLists.forEach(function(list){
             paintList(list.text);
         });
-
     }
 }
 

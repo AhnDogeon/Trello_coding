@@ -1,46 +1,36 @@
-const ball = document.querySelector(".js-cards-list");
+const dragTarget = document.querySelector(".js-cards-list");
 
-ball.onmousedown = function(event) {
+dragTarget.onmousedown = function(event) {
+    let shiftX = event.clientX - dragTarget.getBoundingClientRect().left;
+    let shiftY = event.clientY - dragTarget.getBoundingClientRect().top;
 
-    let shiftX = event.clientX - ball.getBoundingClientRect().left;
-    let shiftY = event.clientY - ball.getBoundingClientRect().top;
-
-    ball.style.position = 'absolute';
-    ball.style.zIndex = 1000;
-    document.body.append(ball);
+    dragTarget.style.position = 'absolute';
+    dragTarget.style.zIndex = 1000;
+    document.body.append(dragTarget);
 
     moveAt(event.pageX, event.pageY);
 
-    // 초기 이동을 고려한 좌표 (pageX, pageY)에서
-    // 공을 이동합니다.
     function moveAt(pageX, pageY) {
-        ball.style.left = pageX - shiftX + 'px';
-        ball.style.top = pageY - shiftY + 'px';
+        dragTarget.style.left = pageX - shiftX + 'px';
+        dragTarget.style.top = pageY - shiftY + 'px';
     }
 
     function onMouseMove(event) {
+        console.log('move');
         moveAt(event.pageX, event.pageY);
     }
 
-    // mousemove로 공을 움직입니다.
     document.addEventListener('mousemove', onMouseMove);
 
-    // 공을 드롭하고, 불필요한 핸들러를 제거합니다.
-    ball.onmouseup = function() {
+    function onMouseUp(event) {
+        console.log('up');
         document.removeEventListener('mousemove', onMouseMove);
-        ball.onmouseup = null;
-    };
-    ball.ondragstart = function() {
-        return false;
-    };
+        dragTarget.onmouseup = null;
+    }
 
+    document.addEventListener('mouseup', onMouseUp);
 };
 
-ball.ondragstart = function() {
+dragTarget.ondragstart = function() {
     return false;
-};
-
-ball.onmouseup = function() {
-    document.removeEventListener('mousemove', onMouseMove);
-    ball.onmouseup = null;
 };
