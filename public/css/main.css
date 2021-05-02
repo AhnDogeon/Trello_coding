@@ -1,16 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
-    background-color: #ecf0f1;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #f89b00;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
+html {
+    background: #f89b00;
+}
 .btn {
     cursor: pointer;
 }
 
 h1 {
-    color: #34495e;
+    color: white;
     text-align: center;
+    font-size: 50px;
     transition: color 0.5s ease-in-out;
 }
+
+
 
 .clicked {
     color:#7f8c8d;
@@ -24,4 +36,8 @@ h1 {
 
 .js-cards-list {
     life-style: none;
+}
+
+div {
+    margin-top: 10px;
 }
