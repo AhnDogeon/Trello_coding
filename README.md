@@ -39,31 +39,31 @@ nodemon app.js
 
 #### List 생성
 
-![리스트생성](https://user-images.githubusercontent.com/45963082/116802025-71328d00-ab4a-11eb-80bd-f51bdd95c18c.gif)
+![리스트생성](https://user-images.githubusercontent.com/45963082/116814036-b75f0f00-ab91-11eb-994c-a2e6834905d2.gif)
 
 
 
 #### List  삭제
 
-![리스트삭제](https://user-images.githubusercontent.com/45963082/116802030-7a235e80-ab4a-11eb-926a-fd2b361e2d6b.gif)
+![리스트삭제](https://user-images.githubusercontent.com/45963082/116814046-bc23c300-ab91-11eb-8253-2ee5c5086b02.gif)
 
 
 
 #### Card 생성
 
-![카드생성](https://user-images.githubusercontent.com/45963082/116802032-80b1d600-ab4a-11eb-9a37-85557191f43c.gif)
+![카드생성](https://user-images.githubusercontent.com/45963082/116814050-c2b23a80-ab91-11eb-92a9-d23a93123ceb.gif)
 
 
 
 #### Card 삭제
 
-![카드삭제1](https://user-images.githubusercontent.com/45963082/116802085-f28a1f80-ab4a-11eb-90dc-14bf94da6fbf.gif)
+![카드삭제](https://user-images.githubusercontent.com/45963082/116814055-c6de5800-ab91-11eb-9007-c3658f00187f.gif)
 
 
 
 #### 카드 Drag and Drop
 
-![드래그](https://user-images.githubusercontent.com/45963082/116802036-8d362e80-ab4a-11eb-9299-2577fb940ff3.gif)
+![드래그](https://user-images.githubusercontent.com/45963082/116814062-cc3ba280-ab91-11eb-8eb7-ce0cd807b204.gif)
 
 
 
