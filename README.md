@@ -32,8 +32,7 @@ nodemon app.js
 ## 기능
 
 
-
-![Animation1](C:\Users\ahn_q\Desktop\Tableau\Animation1.gif)
+![Animation1](https://user-images.githubusercontent.com/45963082/116801628-8c9b9900-ab46-11eb-96f6-d0628a61c80c.gif)
 
 
 
