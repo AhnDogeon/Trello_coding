@@ -33,7 +33,7 @@ function paintList(text){
     const cardUl = document.createElement("ul");
     // 삭제를 위한 id 생성
     const listId = lists.length + 1;
-    delBtn.innerText = "❌";
+    delBtn.innerText = "✖";
     delBtn.addEventListener("click", deleteLists);
     cardInput.placeholder = "Add a Card";
     cardInput.className = "js-cards-input";
@@ -43,8 +43,8 @@ function paintList(text){
     cardUl.className = "js-cards-list";
     span.innerText = text;
     li.appendChild(span);
-    li.appendChild(cardForm);
     li.appendChild(delBtn);
+    li.appendChild(cardForm);
     li.append(cardUl);
     li.id = listId;
     li.className = "js-lists-li";

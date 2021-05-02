@@ -28,9 +28,10 @@ function paintCard(text){
     const spanCard = document.createElement("span");
     // 삭제를 위한 id 생성
     const cardId = cards.length + 1;
-    delCardBtn.innerText = "❌";
+    delCardBtn.innerText = "✖";
     delCardBtn.addEventListener("click", deleteCards);
     spanCard.innerText = text;
+    divCard.className = "divCard";
     divCard.appendChild(spanCard);
     divCard.appendChild(delCardBtn);
     divCard.id = cardId;

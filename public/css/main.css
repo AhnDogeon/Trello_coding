@@ -3,16 +3,23 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%;
-    background-color: #f89b00;
+    background-color: #FFA34A;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 html {
-    background: #f89b00;
+    background: #FFA34A;
 }
 .btn {
     cursor: pointer;
+}
+
+button {
+    float: right;
+    background: transparent;
+    border: none;
 }
 
 h1 {
@@ -22,6 +29,26 @@ h1 {
     transition: color 0.5s ease-in-out;
 }
 
+.divCard  {
+    width: 135px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+    margin-top: 25px;
+    background: #FFBB0F;
+}
+
+.divCard:hover {
+    width: 140px;
+    height: 40px;
+}
+
+
+span {
+    margin-left: 3px;
+}
 
 
 .clicked {
@@ -38,6 +65,21 @@ h1 {
     life-style: none;
 }
 
-div {
-    margin-top: 10px;
+.js-lists-input {
+    width: 350px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.js-cards-input {
+    width: 150px;
+    height: 25px;
+}
+
+strong {
+    max-width: 1024px;
+    left: 40%;
+    display: inline-block;
+    text-algin : center;
 }
