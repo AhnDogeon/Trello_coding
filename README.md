@@ -50,7 +50,8 @@ nodemon app.js
 
 #### Card 삭제
 
-![카드삭제](https://user-images.githubusercontent.com/45963082/116802034-87d8e400-ab4a-11eb-851b-00d37df5de09.gif)
+![카드삭제1](https://user-images.githubusercontent.com/45963082/116802085-f28a1f80-ab4a-11eb-90dc-14bf94da6fbf.gif)
+
 
 
 #### 카드 Drag and Drop
