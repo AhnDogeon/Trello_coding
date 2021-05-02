@@ -31,10 +31,25 @@ nodemon app.js
 
 ## 기능
 
+#### List 생성
 
-![Animation1](https://user-images.githubusercontent.com/45963082/116801628-8c9b9900-ab46-11eb-96f6-d0628a61c80c.gif)
+리스트생성.gif
 
+#### List  삭제
 
+리스트삭제.gif
+
+#### Card 생성
+
+카드생성.gif
+
+#### Card 삭제
+
+카드삭제.gif
+
+#### 카드 Drag and Drop
+
+카드드래그.gif
 
 
 
